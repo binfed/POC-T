@@ -229,7 +229,7 @@ def _checkAPI(args):
             sys.exit(logger.error(msg))
 
         try:
-            if int(args.shodan_offset) <= 0:
+            if int(args.shodan_offset) < 0:
                 msg = 'Invalid value in [--offset], show usage with [-h].'
                 sys.exit(logger.error(msg))
         except Exception:
